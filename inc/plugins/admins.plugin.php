@@ -116,7 +116,7 @@ class admins_plugin {
 					<tr>
 						<th scope="row"><input type="checkbox" name="admin[]" value="<?php echo $admin['id']; ?>" /></th>
 						<td><?php echo $admin['id']; ?></td>
-						<td style="text-align:center;"><img src="http://www.gravatar.com/avatar/<?php echo md5(strtolower($admin['email'])) ?>?d=mm&amp;s=20" alt="Gravatar" height="20" width="20" /></td>
+						<td style="text-align:center;"><img src="https://secure.gravatar.com/avatar/<?php echo md5(strtolower($admin['email'])) ?>?d=mm&amp;s=20" alt="Gravatar" height="20" width="20" /></td>
 						<td><?php echo $admin['login']; ?></td>
 						<td><?php echo $admin['email']; ?></td>
 						<td><?php echo $admin['first_name']; ?></td>
