@@ -1,0 +1,87 @@
+/*
+<?php 
+	$base03		=	"#002b36";
+	$base02		=	"#073642";
+	$base01		=	"#586e75";
+	$base00		=	"#657b83";
+	$base0		=	"#839496";
+	$base1		=	"#93a1a1";
+	$base2		=	"#eee8d5";
+	$base3		=	"#fdf6e3";
+	$yellow		=	"#b58900";
+	$orange		=	"#cb4b16";
+	$red		=	"#dc322f";
+	$magenta	=	"#d33682";
+	$violet		=	"#6c71c4";
+	$blue		=	"#268bd2";
+	$cyan		=	"#2aa198";
+	$green		=	"#859900";
+?>
+*/
+
+html,body {background:#fdf6e3; color:#586e75; font-family:'Convergence', Helvetica, Arial, sans-serif;}
+
+::-moz-selection, 
+::selection {background:#2aa198; color:#fff; text-shadow:none;}
+
+h1,h2,h3,h4,h5,h6 {font-weight:700; color:#cb4b16; text-shadow:.1em .1em .1em rgba(0,0,0,.2);}
+h1 {font-size:2.8em;}
+h2 {font-size:2.2em;}
+h3 {font-size:1.8em;}
+h4 {font-size:1.5em;}
+h5 {font-size:1.2em;}
+h6 {font-size:1.1em;}
+
+small {font-size:.8em;}
+
+a {color:#657b83; text-decoration:none;
+	-webkit-transition:all .5s;
+	   -moz-transition:all .5s;
+	        transition:all .5s;
+}
+a:hover {color:#93a1a1;}
+
+ul,ol,dl {padding:10px 0 10px 20px;}
+
+
+
+header#main-header {padding:20px; background:#002b36;}
+
+nav#main-nav {background:#073642; padding:5px 20px; height:42px; font-size:16px; text-shadow:0 1px 0 rgba(0,0,0,.2);}
+nav#main-nav > ul {height:22px; float:left;}
+nav#main-nav > ul > li {float:left;}
+nav#main-nav > ul li {position:relative; padding:2px 8px; white-space:nowrap;}
+nav#main-nav > ul li ul {display:none; position:absolute; top:100%; left:0; background:#073642; padding:5px; border:0px solid #073642; border-radius:0px 0px 10px 10px;}
+nav#main-nav > ul li:hover > ul {display:block;}
+nav#main-nav > ul ul ul {display:none;} /* For now, let's only deal with two levels.  Flyouts can come later. */
+
+section#content {padding:20px 20px; overflow:auto;}
+section#content.has-aside {}
+section#content > aside {float:right; background:#eee8d5; padding:20px 2%; border-radius:10px; width:20%;}
+section#content > article {background:#eee8d5; margin-bottom:20px; padding:20px 2%; border-radius:10px; width:96%;}
+section#content > article.alert {background:#dc322f; color:#eee8d5;}
+section#content > article > header {border-bottom:1px solid #93a1a1; margin-bottom:20px; padding-bottom:10px;}
+section#content > article > footer {border-top:1px solid #93a1a1; margin-top:20px; padding-top:10px; text-align:right;}
+section#content.has-aside > article {width:70%;}
+
+table.listing-table {width:100%; border-radius:10px;}
+table.listing-table thead {background:#268bd2; border-radius:10px 10px 0 0; color:#fdf6e3; overflow:hidden;}
+table.listing-table thead tr {}
+table.listing-table thead tr th {text-align:left; font-weight:500; padding:5px;}
+table.listing-table tfoot {background:#268bd2; border-radius:0 0 10px 10px; color:#fdf6e3; overflow:hidden;}
+table.listing-table tfoot tr {}
+table.listing-table tfoot tr th {text-align:left; font-weight:500; padding:5px;}
+table.listing-table tbody {}
+table.listing-table tbody tr {}
+table.listing-table tbody tr th {text-align:left; font-weight:500; padding:5px;}
+table.listing-table tbody tr td {padding:5px;}
+
+
+table.form-table {width:100%;}
+
+
+
+footer#main-footer {background:#eee8d5; padding:20px 20px;}
+
+body.fixed-footer {padding-bottom:80px;}
+body.fixed-footer footer#main-footer {position:fixed; bottom:0; width:100%;}
