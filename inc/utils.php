@@ -20,3 +20,11 @@ function __display_alerts(){
 add_action('before-content','__display_alerts',1);
 
 # if( defined('DEBUG') && DEBUG ) __alert( 'This is a test alert!' );
+
+function _val( array $array, $index, $otherwise = NULL ){
+	if( isset( $array[$index] ) ) {
+		return $array[$index];
+	} else {
+		return $otherwise;
+	}
+}

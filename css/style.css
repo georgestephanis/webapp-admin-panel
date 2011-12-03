@@ -25,8 +25,8 @@ html,body {background:#fdf6e3; color:#586e75; font-family:'Convergence', Helveti
 ::selection {background:#2aa198; color:#fff; text-shadow:none;}
 
 h1,h2,h3,h4,h5,h6 {font-weight:700; color:#cb4b16; text-shadow:.1em .1em .1em rgba(0,0,0,.2);}
-h1 {font-size:2.8em;}
-h2 {font-size:2.2em;}
+h1 {font-size:3.0em;}
+h2 {font-size:2.4em;}
 h3 {font-size:1.8em;}
 h4 {font-size:1.5em;}
 h5 {font-size:1.2em;}
@@ -34,18 +34,35 @@ h6 {font-size:1.1em;}
 
 small {font-size:.8em;}
 
-a {color:#657b83; text-decoration:none;
+a,input {color:#657b83; text-decoration:none; outline:0; border:0;
 	-webkit-transition:all .5s;
 	   -moz-transition:all .5s;
 	        transition:all .5s;
 }
-a:hover {color:#93a1a1;}
+a:hover,input:hover {color:#93a1a1;}
+
+input {background:#eee8d5;}
 
 ul,ol,dl {padding:10px 0 10px 20px;}
 
+.button {display:inline-block; padding:3px 8px; margin:5px; border:0px solid #073642; background:#073642; color:#fdf6e3; text-decoration:none; border-radius:5px;}
+.button:hover {color:#002b36;}
+
+.button.yellow 	{background:#b58900;}
+.button.orange 	{background:#cb4b16;}
+.button.red 	{background:#dc322f;}
+.button.magenta {background:#d33682;}
+.button.violet 	{background:#6c71c4;}
+.button.blue 	{background:#268bd2;}
+.button.cyan 	{background:#2aa198;}
+.button.green 	{background:#859900;}
 
 
-header#main-header {padding:20px; background:#002b36;}
+header#main-header {padding:20px; background:#002b36; overflow:auto;}
+header#main-header h1 {float:left; padding:5px 0;}
+header#main-header .login-form {float:right;}
+header#main-header .login-form th {text-align:right; padding:5px;}
+header#main-header .login-form input {font-size:14px; border-radius:5px; padding:3px 8px;}
 
 nav#main-nav {background:#073642; padding:5px 20px; height:42px; font-size:16px; text-shadow:0 1px 0 rgba(0,0,0,.2);}
 nav#main-nav > ul {height:22px; float:left;}

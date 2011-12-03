@@ -1,5 +1,6 @@
 <?php
 
+# if( defined('DEBUG') && DEBUG ) add_action('sidebar','dummy_sidebar_data');
 function dummy_sidebar_data(){
 	?>
 			<h5>Things:</h5>
@@ -15,15 +16,19 @@ function dummy_sidebar_data(){
 			</ol>
 	<?php 
 }
-if( defined('DEBUG') && DEBUG ) add_action('sidebar','dummy_sidebar_data');
 
+
+
+add_action('footer','attribution_link');
 function attribution_link(){
 	?>
 	<small><a href="http://stephanis.info" rel="author">&copy; 2011 George Stephanis</a></small>
 	<?php
 }
-add_action('footer','attribution_link');
 
+
+
+# add_action('content','home_content');
 function home_content(){
 	?>
 	<article>
@@ -33,4 +38,3 @@ function home_content(){
 	</article>
 	<?php
 }
-add_action('content','home_content');

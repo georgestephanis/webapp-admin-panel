@@ -31,7 +31,8 @@ require_once( dirname(__FILE__).'/inc/load.php' );
 			</aside>
 		<?php endif; ?>
 		<?php do_action('before-content'); ?>
-		<?php do_action('content'.(isset($_GET['page'])?'-'.$_GET['page']:'')); ?>
+		<?php do_action('content'); ?>
+		<?php if( isset( $_GET['page'] ) ) do_action('content-'.addslashes($_GET['page'])); ?>
 	</section>
 	<footer id="main-footer">
 		<?php do_action('footer'); ?>
