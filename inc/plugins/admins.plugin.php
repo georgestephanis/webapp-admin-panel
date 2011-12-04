@@ -79,7 +79,20 @@ class admins_plugin {
 	}
 	
 	function form( $id = null ){
-		
+		$x = self::get( $id );
+		if( empty( $x ) ) $x = array();
+		?>
+		<form class="admin-form" method="post" action="?page=admins&amp;action=<?php echo empty($x)?'add':'edit'; ?>-admin">
+			<table class="form-table">
+				<?php _form_row( 'admin_id', 			'ID', 			_val($x,'id'), 			'hidden' 	); ?>
+				<?php _form_row( 'admin_login', 		'Login', 		_val($x,'login'), 		'text' 		); ?>
+				<?php _form_row( 'admin_password', 		'Password', 	_val($x,'password'), 	'password' 	); ?>
+				<?php _form_row( 'admin_email', 		'Email', 		_val($x,'email'), 		'email' 	); ?>
+				<?php _form_row( 'admin_first_name', 	'First Name', 	_val($x,'first_name'), 	'text' 		); ?>
+				<?php _form_row( 'admin_last_name', 	'Last Name', 	_val($x,'last_name'), 	'text' 		); ?>
+			</table>
+		</form>
+		<?php
 	}
 	
 	function table(){
@@ -121,7 +134,8 @@ class admins_plugin {
 						<td><?php echo $admin['email']; ?></td>
 						<td><?php echo $admin['first_name']; ?></td>
 						<td><?php echo $admin['last_name']; ?></td>
-						<td></td>
+						<td><a class="button blue edit" href="?page=admins&amp;action=edit&amp;id=<?php echo $admin['id']; ?>">Edit</a> 
+							<a class="button red delete" href="?page=admins&amp;action=delete&amp;id=<?php echo $admin['id']; ?>">Delete</a></td>
 					</tr>
 					<?php endforeach; ?>
 				</tbody>

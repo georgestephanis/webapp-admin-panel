@@ -41,7 +41,7 @@ a,input {color:#657b83; text-decoration:none; outline:0; border:0;
 }
 a:hover,input:hover {color:#93a1a1;}
 
-input {background:#eee8d5;}
+input {background:#fdf6e3; font-size:14px; border-radius:5px; padding:3px 8px;}
 
 ul,ol,dl {padding:10px 0 10px 20px;}
 
@@ -61,8 +61,6 @@ ul,ol,dl {padding:10px 0 10px 20px;}
 header#main-header {padding:20px; background:#002b36; overflow:auto;}
 header#main-header h1 {float:left; padding:5px 0;}
 header#main-header .login-form {float:right;}
-header#main-header .login-form th {text-align:right; padding:5px;}
-header#main-header .login-form input {font-size:14px; border-radius:5px; padding:3px 8px;}
 
 nav#main-nav {background:#073642; padding:5px 20px; height:42px; font-size:16px; text-shadow:0 1px 0 rgba(0,0,0,.2);}
 nav#main-nav > ul {height:22px; float:left;}
@@ -94,7 +92,10 @@ table.listing-table tbody tr th {text-align:left; font-weight:500; padding:5px;}
 table.listing-table tbody tr td {padding:5px;}
 
 
-table.form-table {width:100%;}
+table.form-table {}
+table.form-table tr {}
+table.form-table tr th {text-align:right; padding:5px;}
+table.form-table tr td {}
 
 
 

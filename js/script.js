@@ -7,4 +7,8 @@ jQuery(document).ready(function($){
 		$(this).children('ul').hide();
 	});
 	
+	if ($.browser.webkit) {
+		$('input').attr('autocomplete', 'off');
+	}
+	
 });
