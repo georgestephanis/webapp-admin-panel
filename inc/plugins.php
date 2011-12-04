@@ -1,7 +1,7 @@
 <?php
 
 if( !defined( 'PLUGIN_PATH' ) ){
-	define( 'PLUGIN_PATH', dirname(__FILE__).'/plugins/' );
+	define( 'PLUGIN_PATH', INC_PATH.'plugins/' );
 }
 
 class plugin_system{
@@ -53,7 +53,7 @@ class plugin_system{
 					<?php foreach( $available_plugins as $file ): ?>
 					<tr>
 						<th scope="row"><input type="checkbox" name="plugin[]" value="<?php echo $file; ?>" /></th>
-						<td><?php echo $file; ?></td>
+						<td><?php echo self::get_plugin_name( $file ); ?></td>
 						<td><?php echo $file; ?></td>
 						<td><?php echo self::is_plugin_active( $file )?'Yes':'No'; ?></td>
 						<td><?php if( self::is_plugin_active( $file ) ): ?>
@@ -103,7 +103,8 @@ class plugin_system{
 	}
 	
 	function activate_plugin( $file ){
-		if( strpos( $file, '/' ) ) return; # We don't want to leave any chance of someone hacking into server files.
+		if( strpos( $file, '/' ) ) return null;
+		if( empty( $file ) ) return null;
 		$active_plugins = self::get_active_plugins();
 		if( ! in_array( $file, $active_plugins ) ){
 			set_option( 'active_plugins', array_merge( $active_plugins, array($file) ) );
@@ -132,7 +133,7 @@ class plugin_system{
 	}
 	
 	function load_plugin( $file = null ){
-		if( strpos( $file, '/' ) ) return;
+		if( strpos( $file, '/' ) ) return null;
 		if( empty( $file ) ) return null;
 		if( file_exists( PLUGIN_PATH.$file ) ){
 			require_once( PLUGIN_PATH.$file );
@@ -140,9 +141,22 @@ class plugin_system{
 		}
 		return false;
 	}
+	
+	function get_plugin_name( $file ){
+		if( strpos( $file, '/' ) ) return null;
+		if( empty( $file ) ) return null;
+		if( file_exists( PLUGIN_PATH.$file ) ){
+			$contents = file_get_contents( PLUGIN_PATH.$file );
+			if( false !== strpos( $contents, 'flibbertygibbet' ) ){
+			
+			}else{
+				return ucwords( str_replace( array('-','_','.'), ' ', str_replace( '.plugin.php', '', $file ) ) );
+			}
+		}
+		return false;
+	}
 
 }
-# pikachu::go();
 plugin_system::go();
 
 

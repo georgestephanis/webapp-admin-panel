@@ -1,7 +1,4 @@
-<?php
-require_once( dirname(__FILE__).'/config.php' );
-require_once( dirname(__FILE__).'/inc/load.php' );
-?><!DOCTYPE html>
+<?php require_once( dirname(__FILE__).'/inc/load.php' ); ?><!DOCTYPE html>
 <html>
 <head>
 	<?php do_action('admin-head-top'); ?>
