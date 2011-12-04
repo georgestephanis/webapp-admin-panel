@@ -11,6 +11,11 @@ if( !defined('DB_HOST') ){
 	}
 }
 
+if( defined('DEBUG') && DEBUG ){
+	error_reporting(E_ALL);
+	ini_set('display_errors',1);
+}
+
 if( !defined('INC_PATH') ){
 	define('INC_PATH',dirname(__FILE__).'/');
 }
