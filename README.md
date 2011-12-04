@@ -20,3 +20,4 @@ It has a simple plugin architecture, along with two included plugins (so far, mo
 * Menu Class is [PHP Menu Builder Class, by Corey Worrell](http://coreyworrell.com/demo/php_menu_builder)
 * Hooks and Actions are lifted directly out of [WordPress](http://core.svn.wordpress.org/trunk/wp-includes/plugin.php)
 * Options functions are a simplified version of the system from [WordPress](http://core.svn.wordpress.org/trunk/wp-includes/functions.php)
+* Default color scheme taken from [Solarized, by Ethan Schoonover](http://ethanschoonover.com/solarized)
